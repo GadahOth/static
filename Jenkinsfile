@@ -7,7 +7,7 @@ pipeline {
                 // withAWS(region:'us-west-2') {
                 //     // do something
                 // }
-                withAWS(region:'us-west-2' credentials:'jenkins') {
+                withAWS(region:'us-west-2', credentials:'jenkins') {
                     s3Upload(file:'index.html', bucket:'gadahjenkinsbucket'), path:'path/to/target/index.html'
                 }
                 sh '''
