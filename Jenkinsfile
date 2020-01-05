@@ -8,10 +8,10 @@ pipeline {
                 //     // do something
                 // }
                 withAWS(region:'us-west-2', credentials:'jenkins') {
-                    s3Upload(file:'index.html', bucket:'gadahjenkinsbucket'), path:'path/to/target/index.html'
+                    s3Upload(file:'index.html', bucket:'gadahjenkinsbucket', path:'path/to/target/index.html')
                 }
                 sh '''
-                    echo "successfuly uploaded!"
+                    echo "successfully uploaded!"
                 '''
             }
         }
